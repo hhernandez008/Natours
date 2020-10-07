@@ -46,7 +46,7 @@ body {
   position: absolute;
   top: 40%;
   left: 50%;
-  transform: translate(-50%, -50); /* shift element back 50% on the x-axis of the element and up 50% on the y-axis in relation to elements original position */
+  transform: translate(-50%, -50%); /* shift element back 50% on the x-axis of the element and up 50% on the y-axis in relation to elements original position */
 }
 
 .heading-primary{
