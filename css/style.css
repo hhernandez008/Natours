@@ -48,12 +48,14 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
    /* shift element back 50% on the x-axis of the element and up 50% on the y-axis in relation to elements original position */
+   text-align: center;
 }
 
 .heading-primary{
   color: white;
   text-transform: uppercase;
   backface-visibility: hidden;
+  margin-bottom: 60px;
 }
 
 .heading-primary-main{
@@ -75,11 +77,36 @@ body {
   letter-spacing: 17.4px;
 
   animation: moveInRight 1s ease-out;
-  /* use animation propertie as a shortcut for all of the individual properties.
+  /* use animation properties as a shortcut for all of the individual properties.
   animation-name: moveInRight;
   animation-duration: 1s;
   animation-timing-function: ease-out; */
 }
+
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: transform .2s; /* transition has to be on initial state */
+}
+
+.btn:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba( 0, 0, 0, 0.2); /*X Y Blur Color*/
+}
+
+.btn:active{
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba( 0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
+}
+
 
 @keyframes moveInLeft { /*animation, browsers optimized for only animating the opacity and transform properties*/
   0% { /*start*/
