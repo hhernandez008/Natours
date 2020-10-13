@@ -14,7 +14,7 @@ Dark green: #28b485
 }
 
 html {
-  font-size: 62.5%%; /* so as not to override user font settings best to use % for initial font size. Default is 16px, 10px/16px = 62.5% */
+  font-size: 62.5%; /* so as not to override user font settings best to use % for initial font size. Default is 16px, 10px/16px = 62.5% */
   /* font-size: 10px; /* for rem calculating, 1 rem = 10 px; more responsive design*/
 }
 
