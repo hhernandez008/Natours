@@ -7,19 +7,25 @@ Dark green: #28b485
 
 */
 
-*{
+*, *::after, *::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /*change box model so no pading or borders added to item size */
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%%; /* so as not to override user font settings best to use % for initial font size. Default is 16px, 10px/16px = 62.5% */
+  /* font-size: 10px; /* for rem calculating, 1 rem = 10 px; more responsive design*/
 }
 
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.7;
   color: #777;
-  padding: 30px;
+  padding: 3rem;
+  box-sizing: border-box; /*change box model so no pading or borders added to item size */
 }
 
 .header{
@@ -34,12 +40,12 @@ body {
 
 .logo-box {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 4rem;
+  left: 4rem;
 }
 
 .logo {
-  height: 35px;
+  height: 3.5rem;
 }
 
 .text-box{
@@ -55,14 +61,14 @@ body {
   color: white;
   text-transform: uppercase;
   backface-visibility: hidden;
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
 }
 
 .heading-primary-main{
   display: block;
-  font-size: 60px;
+  font-size: 6rem;
   font-weight: 400;
-  letter-spacing: 35px;
+  letter-spacing: 3.5rem;
 
 
   animation-name: moveInLeft;
@@ -72,9 +78,9 @@ body {
 
 .heading-primary-sub{
   display: block;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 400;
-  letter-spacing: 17.4px;
+  letter-spacing: 1.74rem;
 
   animation: moveInRight 1s ease-out;
   /* use animation properties as a shortcut for all of the individual properties.
@@ -92,7 +98,7 @@ body {
   display: inline-block;
   height: 100%;
   width: 100%;
-  border-radius: 100px;
+  border-radius: 10rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -103,15 +109,16 @@ body {
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
   display: inline-block;
-  border-radius: 100px;
+  border-radius: 10rem;
   transition: transform .2s; /* transition has to be on initial state */
+  font-size: 1.6rem;
 }
 
 .btn:hover{
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba( 0, 0, 0, 0.2); /*X Y Blur Color*/
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba( 0, 0, 0, 0.2); /*X Y Blur Color*/
 }
 
 .btn:hover::after{
@@ -121,8 +128,8 @@ body {
 }
 
 .btn:active{
-  transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba( 0, 0, 0, 0.2);
+  transform: translateY(-0.1rem);
+  box-shadow: 0 .5rem 1rem rgba( 0, 0, 0, 0.2);
 }
 
 .btn-white {
@@ -136,16 +143,16 @@ body {
 
 .btn.btn-animated{
   animation: moveInBottom .5s ease-out .75s;
-  animation-fill-mode: backwards; 
+  animation-fill-mode: backwards;
 }
 
 @keyframes moveInLeft { /*animation, browsers optimized for only animating the opacity and transform properties*/
   0% { /*start*/
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
   }
   80%{
-    transform: translateX(10px);
+    transform: translateX(1rem);
   }
   100% { /*finish*/
     opacity: 1;
@@ -156,10 +163,10 @@ body {
 @keyframes moveInRight { /*animation, browsers optimized for only animating the opacity and transform properties*/
   0% { /*start*/
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
   80%{
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
   }
   100% { /*finish*/
     opacity: 1;
@@ -170,7 +177,7 @@ body {
 @keyframes moveInBottom { /*animation, browsers optimized for only animating the opacity and transform properties*/
   0% { /*start*/
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(3rem);
   }
 
   100% { /*finish*/
