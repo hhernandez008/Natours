@@ -11,6 +11,9 @@ $color-primary: #55c57a;
 $color-pirmary-light: #7ed56f;
 $color-primary-dark: #28b485;
 
+$color-grey-dark: #777;
+$color-white: #fff;
+$color-black: #000;
 
 *, *::after, *::before {
   margin: 0;
@@ -28,7 +31,7 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
-  color: #777;
+  color: $color-grey-dark;
   padding: 3rem;
   box-sizing: border-box; /*change box model so no pading or borders added to item size */
 }
@@ -134,12 +137,12 @@ body {
 
 .btn:active{
   transform: translateY(-0.1rem);
-  box-shadow: 0 .5rem 1rem rgba( 0, 0, 0, 0.2);
+  box-shadow: 0 .5rem 1rem rgba( $color-black, 0.2);
 }
 
 .btn--white {
-  background-color: #fff;
-  color: #777;
+  background-color: $color-white;
+  color: $color-grey-dark;
 }
 
 .btn--white::after{
