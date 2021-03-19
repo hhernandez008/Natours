@@ -1,2 +1,16 @@
 // This file is for low level basics: resets, styles for html, and body element selectors
-// A partial sass file, (name always starts with an underscore)
+
+*, *::after, *::before {
+     margin: 0;
+     padding: 0;
+     box-sizing: inherit;
+}
+
+html {
+     font-size: 62.5%; /* so as not to override user font settings best to use % for initial font size. Default is 16px, 10px/16px = 62.5% */
+     /* font-size: 10px; /* for rem calculating, 1 rem = 10 px; more responsive design*/
+}
+
+body {
+     box-sizing: border-box; /*change box model so no pading or borders added to item size */
+}

@@ -1,0 +1,7 @@
+@mixin clearfix{ //used to give height to floated elements
+     &::after{
+          content: "";
+          display: table;
+          clear: both;
+     }
+}
